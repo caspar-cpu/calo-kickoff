@@ -1,7 +1,7 @@
 {
   "name": "calo-kickoff",
   "description": "Start any build at Calo: a rigorous brainstorm that also recommends Calo's approved tools for your task and applies Calo's GitHub rules, so the resulting code ships into a company-connected, compliant repo.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "Calo",
     "email": "caspar@calo.app"

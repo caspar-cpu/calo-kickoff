@@ -27,13 +27,13 @@ Then start any build by invoking the skill — it also triggers automatically wh
 begin creating something:
 
 ```
-/calo-kickoff:brainstorming
+/calo-kickoff:kickoff
 ```
 
 ## What's inside
 
 ```
-skills/brainstorming/
+skills/kickoff/
 ├── SKILL.md                      the brainstorming flow + the "Apply Calo standards" step
 ├── references/
 │   ├── approved-tools.md         the approved-tools register
@@ -45,7 +45,7 @@ skills/brainstorming/
 
 ## Maintaining the registers
 
-The two files in `skills/brainstorming/references/` are the source of truth:
+The two files in `skills/kickoff/references/` are the source of truth:
 
 - **`approved-tools.md`** — to add, remove, or change an approved tool.
 - **`github-rules.md`** — to update the GitHub rules.

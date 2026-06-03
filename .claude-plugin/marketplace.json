@@ -9,7 +9,7 @@
     {
       "name": "calo-kickoff",
       "description": "Start any build at Calo: rigorous brainstorm + approved-tools recommendations + Calo GitHub rules.",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "source": "./",
       "author": {
         "name": "Calo",

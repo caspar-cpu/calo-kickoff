@@ -6,16 +6,16 @@ License.
 
 Calo added two standards layers on top of the original flow:
 
-1. **Approved tools** — `skills/brainstorming/references/approved-tools.md` and the
+1. **Approved tools** — `skills/kickoff/references/approved-tools.md` and the
    "Recommend approved tools" sub-step.
-2. **GitHub rules** — `skills/brainstorming/references/github-rules.md` and the
+2. **GitHub rules** — `skills/kickoff/references/github-rules.md` and the
    "Confirm build & repo compliance" sub-step.
 
 The following files are copied from Superpowers unmodified:
 
-- `skills/brainstorming/visual-companion.md`
-- `skills/brainstorming/spec-document-reviewer-prompt.md`
-- `skills/brainstorming/scripts/` (the visual-companion server and helpers)
+- `skills/kickoff/visual-companion.md`
+- `skills/kickoff/spec-document-reviewer-prompt.md`
+- `skills/kickoff/scripts/` (the visual-companion server and helpers)
 
 ## Upstream license
 
