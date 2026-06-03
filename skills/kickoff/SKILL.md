@@ -1,15 +1,13 @@
 ---
 name: kickoff
-description: "You MUST use this before any creative work at Calo — creating features, building components, adding functionality, or modifying behavior. Runs the full brainstorming-to-design flow, then recommends Calo's approved tools for the task and applies Calo's GitHub rules so the resulting code ships into a company-connected, compliant repo."
+description: "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation."
 ---
 
-# Calo Kickoff — Brainstorming Ideas Into Designs
+# Brainstorming Ideas Into Designs
 
-_Adapted from the [superpowers](https://github.com/obra/superpowers) `brainstorming` skill (MIT, © Jesse Vincent), with two Calo standards layers added. See [ATTRIBUTION.md](../../ATTRIBUTION.md)._
+Help turn ideas into fully formed designs and specs through natural collaborative dialogue.
 
-Help turn ideas into fully formed designs and specs through natural collaborative dialogue — and make sure every build starts on Calo's **approved tools** and ships into a **Calo-compliant GitHub repo**.
-
-Start by understanding the current project context, then ask questions one at a time to refine the idea. Once you understand what you're building, apply Calo's standards, present the design, and get user approval.
+Start by understanding the current project context, then ask questions one at a time to refine the idea. Once you understand what you're building, present the design and get user approval.
 
 <HARD-GATE>
 Do NOT invoke any implementation skill, write any code, scaffold any project, or take any implementation action until you have presented a design and the user has approved it. This applies to EVERY project regardless of perceived simplicity.
@@ -27,12 +25,11 @@ You MUST create a task for each of these items and complete them in order:
 2. **Offer visual companion** (if topic will involve visual questions) — this is its own message, not combined with a clarifying question. See the Visual Companion section below.
 3. **Ask clarifying questions** — one at a time, understand purpose/constraints/success criteria
 4. **Propose 2-3 approaches** — with trade-offs and your recommendation
-5. **Apply Calo standards** — recommend approved tools (with the access route) and confirm build & repo compliance, reading the reference files. See "Applying Calo Standards" below.
-6. **Present design** — in sections scaled to their complexity, get user approval after each section; include the **Recommended Approved Tools** and **Build & Repo Compliance** sections
-7. **Write design doc** — save to `docs/specs/YYYY-MM-DD-<topic>-design.md` and commit
-8. **Spec self-review** — quick inline check for placeholders, contradictions, ambiguity, scope (see below)
-9. **User reviews written spec** — ask user to review the spec file before proceeding
-10. **Transition to implementation** — invoke writing-plans skill to create implementation plan
+5. **Present design** — in sections scaled to their complexity, get user approval after each section
+6. **Write design doc** — save to `docs/superpowers/specs/YYYY-MM-DD-<topic>-design.md` and commit
+7. **Spec self-review** — quick inline check for placeholders, contradictions, ambiguity, scope (see below)
+8. **User reviews written spec** — ask user to review the spec file before proceeding
+9. **Transition to implementation** — invoke writing-plans skill to create implementation plan
 
 ## Process Flow
 
@@ -43,7 +40,6 @@ digraph brainstorming {
     "Offer Visual Companion\n(own message, no other content)" [shape=box];
     "Ask clarifying questions" [shape=box];
     "Propose 2-3 approaches" [shape=box];
-    "Apply Calo standards\n(approved tools + repo rules)" [shape=box];
     "Present design sections" [shape=box];
     "User approves design?" [shape=diamond];
     "Write design doc" [shape=box];
@@ -56,8 +52,7 @@ digraph brainstorming {
     "Visual questions ahead?" -> "Ask clarifying questions" [label="no"];
     "Offer Visual Companion\n(own message, no other content)" -> "Ask clarifying questions";
     "Ask clarifying questions" -> "Propose 2-3 approaches";
-    "Propose 2-3 approaches" -> "Apply Calo standards\n(approved tools + repo rules)";
-    "Apply Calo standards\n(approved tools + repo rules)" -> "Present design sections";
+    "Propose 2-3 approaches" -> "Present design sections";
     "Present design sections" -> "User approves design?";
     "User approves design?" -> "Present design sections" [label="no, revise"];
     "User approves design?" -> "Write design doc" [label="yes"];
@@ -69,38 +64,6 @@ digraph brainstorming {
 ```
 
 **The terminal state is invoking writing-plans.** Do NOT invoke frontend-design, mcp-builder, or any other implementation skill. The ONLY skill you invoke after brainstorming is writing-plans.
-
-## Applying Calo Standards
-
-Calo Kickoff adds one step to brainstorming. After exploring approaches, and as part of presenting the design, apply Calo's two standards layers and fold them into the design and the written spec. **Read the reference files fresh each time — never recommend tools or quote rules from memory.**
-
-### 5a — Recommend approved tools
-
-Read [`references/approved-tools.md`](references/approved-tools.md). Work out which technical dimensions the project touches — language, frontend, hosting, database, AI model, automation, messaging/API, data tooling, monitoring — and for each, recommend the specific **approved** tool with a one-line "why". Prefer the smallest set of tools that does the job; Calo deliberately keeps the list short.
-
-Produce a **Recommended Approved Tools** section:
-
-| Need | Recommended (approved) tool | Why |
-|------|------------------------------|-----|
-| … | … | … |
-
-**Access and off-list tools.** Only recommend tools that appear in the register. If the project needs a capability the register doesn't cover — *including any tool an AI agent proposes while building* — do not silently adopt it. The plan must carry this note:
-
-> ⚠️ **`<tool/capability>` is not on Calo's approved list.** Don't sign up for it yourself. Speak to **Bohdan or Caspar**, who will set up an admin-managed company account and invite you. The same applies to any approved tool you don't yet have access to.
-
-### 5b — Confirm build & repo compliance
-
-Read [`references/github-rules.md`](references/github-rules.md) and state the rules that apply to this build, so the resulting code ships correctly:
-
-- The repo must be **connected to the Calo GitHub org** — if the account/repo isn't connected yet, contact **Bohdan** before writing code (the Golden Rule).
-- Default branch is **`master`**; **no direct pushes** — every change goes through a branch and a PR.
-- **Two approvals** are required before a merge.
-- **Signed commits only** — a signing key linked to your GitHub profile.
-- Keep files **under 10MB**; heavy datasets and media stay out of the repo.
-- Visibility: **Internal** by default; **Public** only for genuine open-source.
-- Use the internal building blocks: **`install`** (one-shot local machine setup), **`goui`** (design system), **`actions`** (reusable CI/CD), and **`copilot`** (internal AI assist).
-
-Produce a **Build & Repo Compliance** section capturing the above for this project. Both sections become part of the written spec, so they travel into the plan and the build.
 
 ## The Process
 
@@ -126,7 +89,6 @@ Produce a **Build & Repo Compliance** section capturing the above for this proje
 - Scale each section to its complexity: a few sentences if straightforward, up to 200-300 words if nuanced
 - Ask after each section whether it looks right so far
 - Cover: architecture, components, data flow, error handling, testing
-- Include the **Recommended Approved Tools** and **Build & Repo Compliance** sections from "Applying Calo Standards"
 - Be ready to go back and clarify if something doesn't make sense
 
 **Design for isolation and clarity:**
@@ -146,7 +108,7 @@ Produce a **Build & Repo Compliance** section capturing the above for this proje
 
 **Documentation:**
 
-- Write the validated design (spec) to `docs/specs/YYYY-MM-DD-<topic>-design.md`
+- Write the validated design (spec) to `docs/superpowers/specs/YYYY-MM-DD-<topic>-design.md`
   - (User preferences for spec location override this default)
 - Use elements-of-style:writing-clearly-and-concisely skill if available
 - Commit the design document to git
@@ -181,8 +143,6 @@ Wait for the user's response. If they request changes, make them and re-run the 
 - **Explore alternatives** - Always propose 2-3 approaches before settling
 - **Incremental validation** - Present design, get approval before moving on
 - **Be flexible** - Go back and clarify when something doesn't make sense
-- **Approved tools by default** - Recommend from `references/approved-tools.md`; route off-list needs and access requests to Bohdan or Caspar
-- **Ship compliant** - The resulting code lands in a Calo-org-connected repo that follows the GitHub rules in `references/github-rules.md`
 
 ## Visual Companion
 

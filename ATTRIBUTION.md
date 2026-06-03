@@ -1,21 +1,23 @@
 # Attribution
 
-Calo Kickoff's brainstorming skill is adapted from the **brainstorming** skill in
-[Superpowers](https://github.com/obra/superpowers) by Jesse Vincent, used under the MIT
-License.
+The **`kickoff`** skill in this plugin is the **`brainstorming`** skill from
+[Superpowers](https://github.com/obra/superpowers) by Jesse Vincent, used **verbatim** under
+the MIT License. The only changes are the two forced by repackaging:
 
-Calo added two standards layers on top of the original flow:
+- the frontmatter `name:` is `kickoff` (not `brainstorming`), to avoid a skill-name collision
+  when Superpowers is also installed, and
+- the skill's single reference to its own visual-companion path points to `skills/kickoff/`
+  instead of `skills/brainstorming/`.
 
-1. **Approved tools** — `skills/kickoff/references/approved-tools.md` and the
-   "Recommend approved tools" sub-step.
-2. **GitHub rules** — `skills/kickoff/references/github-rules.md` and the
-   "Confirm build & repo compliance" sub-step.
-
-The following files are copied from Superpowers unmodified:
+The methodology — every other line — is unchanged. The following files under
+`skills/kickoff/` are also copied from Superpowers unmodified:
 
 - `skills/kickoff/visual-companion.md`
 - `skills/kickoff/spec-document-reviewer-prompt.md`
 - `skills/kickoff/scripts/` (the visual-companion server and helpers)
+
+The **`approved-tools`** skill and the registers in `skills/approved-tools/references/`
+(`approved-tools.md`, `github-rules.md`) are Calo's own work, not from Superpowers.
 
 ## Upstream license
 
