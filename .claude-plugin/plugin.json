@@ -1,0 +1,20 @@
+{
+  "name": "calo-kickoff",
+  "description": "Start any build at Calo: a rigorous brainstorm that also recommends Calo's approved tools for your task and applies Calo's GitHub rules, so the resulting code ships into a company-connected, compliant repo.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Calo",
+    "email": "caspar@calo.app"
+  },
+  "homepage": "https://github.com/caspar-cpu/calo-kickoff",
+  "repository": "https://github.com/caspar-cpu/calo-kickoff",
+  "license": "MIT",
+  "keywords": [
+    "brainstorming",
+    "calo",
+    "approved-tools",
+    "github-rules",
+    "kickoff",
+    "planning"
+  ]
+}

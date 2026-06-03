@@ -1,0 +1,20 @@
+{
+  "name": "calo",
+  "description": "Calo's Claude Code plugin marketplace.",
+  "owner": {
+    "name": "Caspar Rose",
+    "email": "caspar@calo.app"
+  },
+  "plugins": [
+    {
+      "name": "calo-kickoff",
+      "description": "Start any build at Calo: rigorous brainstorm + approved-tools recommendations + Calo GitHub rules.",
+      "version": "0.1.0",
+      "source": "./",
+      "author": {
+        "name": "Calo",
+        "email": "caspar@calo.app"
+      }
+    }
+  ]
+}
